@@ -23,6 +23,9 @@ App.use(
 App.use(express.json());
 App.use(cookieParser());
 
+App.get("/api", (req,res)=>{
+  res.send("Working...")
+});
 App.use("/api/users", userRouter);
 App.use("/api/foods", foodRouter);
 App.use("/api/categories", categoriesRouter);
