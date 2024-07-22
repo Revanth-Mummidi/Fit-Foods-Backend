@@ -1,5 +1,5 @@
 import UserModel from "../models/UserModel.js";
-import bcrypt from "bcrypt-nodejs";
+import bcrypt from "bcrypt";
 
 export const getProfile = async (req, res) => {
   try {

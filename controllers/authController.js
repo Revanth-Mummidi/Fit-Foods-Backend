@@ -1,6 +1,6 @@
 import UserModel from "../models/UserModel.js";
 import { sendcookie } from "../utils/cookie_util.js";
-import bcrypt from "bcrypt-nodejs";
+import bcrypt from "bcrypt";
 export const register = async (req, res, next) => {
   try {
     const { firstName, lastName, email, password } = req.body;
@@ -22,6 +22,7 @@ export const register = async (req, res, next) => {
 
     sendcookie(user, res, "successfully registered", 201);
   } catch (e) {
+    console.log(e)
     throw next(e);
   }
 };
