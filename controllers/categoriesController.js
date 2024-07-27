@@ -35,7 +35,7 @@ export const getCategory = async (req, res, next) => {
         return res.status(404).send({ error: 'Food item not found' });
     }
     const userHealthIssues = user.healthIssues || [];
-      const userAllergies = user.allergies || [];
+    const userAllergies = user.allergies || [];
     const response=foodsData.map((foods,index)=>{
         const foodHealthIssues = foods.nonConsumableByHealthIssues || [];
         const foodAllergies = foods.nonConsumableByAllergies || [];
